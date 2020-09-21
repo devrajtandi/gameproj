@@ -17,6 +17,7 @@
     <title>Jay bharat-Game</title>
     <style>
         .result {
+            width: 100%;
             margin-top: 10px;
             text-align: center;
             font-size: 22px;
@@ -30,9 +31,7 @@
         }
 
         /* css for develop the table design  */
-        .tableBack {
-            background-color: #fff;
-        }
+
 
         .table td,
         .table th {
@@ -50,12 +49,68 @@
             vertical-align: bottom;
             border-bottom: 2px black;
         }
+
+        .cercal {
+            background-color: white;
+            border-radius: 45px;
+            color: white;
+            margin-right: 1px;
+            margin-left: 1px;
+        }
+
+        .spinner-grow {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            vertical-align: text-bottom;
+            background-color: currentColor;
+            border-radius: 50%;
+            opacity: 0;
+            -webkit-animation: spinner-grow .75s linear infinite;
+            animation: spinner-grow .75s linear infinite;
+        }
+/* design a logo anhore tage  */
+        .namehref {
+            text-decoration: none ! important;
+        }
+/* design the days main dev here  */
+        .mainDays {
+            margin-top: 5px;
+            width: 100%;
+            height: 50vh;
+            border: 1px solid #dee2e6!important;
+            background-color: #25d87333;
+            padding: 2px;
+            
+        }
+
+        .seconddiv{
+            margin: 0px 0px 2px;
+            padding: 0px;
+            width: 100%;
+            height: 45vh;
+            background-color:  rgb(255, 204, 153);
+            border : 2px solid rgb(231, 29, 54);
+            border-radius: 10px 0px 10px 10px;
+        }
+        .dayshr{
+            text-align: center;
+            background-color: rgb(231, 29, 54);
+            color: white;
+        }
+
+        .daypara{
+            text-align: center;
+            
+        }
     </style>
 </head>
 
 <body>
     <center>
-        <h1 class="textColor my-2">SattaMatkaa.Site</h1>
+        <a href="/" class="namehref">
+            <h1 class="textColor my-2">SattaMatkaa.Site</h1>
+        </a>
     </center>
 
 
@@ -65,12 +120,13 @@
             accusantium numquam perspiciatis officia deleniti dolor. Modi quaerat similique vero facere atque harum,
             aliquam nihil distinctio exercitationem, nam itaque.</p>
     </div>
-    <!-- <span class="spinner-grow text-light "></span>
-    <span class="spinner-grow text-light"></span> -->
+
+
 
     <div class="live">
 
-        <h4 class="livegame"><img src="/static/img/outline1.png " class="img1" alt="img"> LIVE - RESULT - ZONE</h4>
+        <h4 class="livegame"><span class="cercal spinner-grow">*</span> LIVE - RESULT - ZONE <span
+                class="cercal spinner-grow">*</span></h4>
 
         <div class="firstName">
             <h4>Jay bharat</h4>
@@ -334,40 +390,78 @@
     </div>
 
     <div class="container-flude result">
-        <h3 class="tablehr"> MITAlI STARLINE RESULT </h3>
+        <h3 class="tablehr" style="width: 100%;"><span class="cercal">*</span> MITAlI STARLINE RESULT <span class="cercal">*</span></h3>
     </div>
-    <div class="container-flude tableBack">
+    <div class="container-flude tablecover">
         <table class="table table-bordered">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col" style="padding-left: 10%;">Time</th>
+                    <th scope="col" style="padding-left: 10%;">Result</th>
+                    <th scope="col" style="padding-left: 10%;">Time</th8>
+                    <th scope="col" style="padding-left: 10%;">Result</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope="row" style="padding-left: 10%;">10:00 AM</th>
+                    <td style="padding-left: 10%;">***-*</td>
+                    <td style="padding-left: 10%; font-weight: bold;">04:00 PM</td>
+                    <td style="padding-left: 10%;">***-*</td>
                 </tr>
                 <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
+                    <th scope="row" style="padding-left: 10%;">11:00 AM</th>
+                    <td style="padding-left: 10%;">***-*</td>
+                    <td style="padding-left: 10%; font-weight: bold;">05:00 PM</td>
+                    <td style="padding-left: 10%;">***-*</td>
                 </tr>
                 <tr>
-                    <th scope="row">3</th>
-                    <td>Larry the Bird</td>
-                    <td>@twitter</td>
-                    <td>@fat</td>
+                    <th scope="row" style="padding-left: 10%;">12:00 PM</th>
+                    <td style="padding-left: 10%;">***-*</td>
+                    <td style="padding-left: 10%; font-weight: bold;">06:00 PM</td>
+                    <td style="padding-left: 10%;">***-*</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="padding-left: 10%;">01:00 PM</th>
+                    <td style="padding-left: 10%;">***-*</td>
+                    <td style="padding-left: 10%; font-weight: bold;">07:00 PM</td>
+                    <td style="padding-left: 10%;">***-*</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="padding-left: 10%;">02:00 PM</th>
+                    <td style="padding-left: 10%;">***-*</td>
+                    <td style="padding-left: 10%; font-weight: bold;">08:00 PM</td>
+                    <td style="padding-left: 10%;">***-*</td>
+                </tr>
+                <tr>
+                    <th scope="row" style="padding-left: 10%;">03:00 PM</th>
+                    <td style="padding-left: 10%;">***-*</td>
+                    <td style="padding-left: 10%; font-weight: bold;">09:00 PM</td>
+                    <td style="padding-left: 10%;">***-*</td>
                 </tr>
             </tbody>
         </table>
     </div>
+
+    
+        <div class="container-flude mainDays ">
+            <div class="container-flude seconddiv">
+                <h3 class="dayshr">Rajdhani, Time, Main Ratan, Mumbai Royal Night</h3>
+                <h3 class="dayshr">Rajdhani, Time, Main Ratan, Mumbai Royal Night</h3>
+                <h3 class="dayshr">Rajdhani, Time, Main Ratan, Mumbai Royal Night</h3>
+                <p class="daypara"><b> Mon. 1 6 3 8 </b><br>
+                    <b>Tue. 3 8 4 9 <br></b> 
+                    <b> Wed. 2 7 4 9<br></b>
+                    <b> Thu. 2 7 5 0<br></b>
+                    <b>Fri. 1 6 4 9<br></b> 
+                    <b> Sat. 3 8 4 9<br></b>
+                    <b> Sun. 2 7 3 8</b></p>
+            </div>
+
+        </div>
+  
+
+
 
 
     <!-- Optional JavaScript -->
