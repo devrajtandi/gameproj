@@ -20,4 +20,15 @@ from django.urls import path , include
 
 urlpatterns = [
     path("",views.index, name= 'index'),
+    path("weeklyChart", views.weeklyChart, name='weeklyChart'),
+    path("allMarket", views.allMarket, name='allMarket'),
+    path("gussingFrom", views.gussingFrom, name= 'gussingFrom'),
+    path("bharathjodi", views.bharathjodi, name= 'bharathjodi'),
+    path("milanDay", views.milanDay, name= 'milanDay'),
+    path("sriDevi", views.sriDevi, name= 'sriDevi'),
+    path("timeBazar", views.timeBazar, name= 'timeBazar'),
+    path("panelBharath", views.panelBharath, name= 'panelBharath'),
+    path("panelmilan", views.panelmilan, name= 'panelmilan'),
+    path("panelseridevi", views.panelseridevi, name= 'panelseridevi'),
+    path("paneltime", views.paneltime, name= 'paneltime')
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
