@@ -50,7 +50,7 @@
             border-bottom: 2px black;
         }
 
- /* ************************************************ */
+        /* ************************************************ */
 
         .cercal {
             background-color: white;
@@ -230,10 +230,11 @@
             margin-bottom: 25px;
         }
 
+        /* butoon styli started here  */
         .link {
             padding-top: 15px;
             background: #117a8b;
-            color: white;
+            color: white !important;
             box-shadow: 2px 2px #360813;
             font-size: medium;
             margin: 10px 2px;
@@ -247,16 +248,16 @@
             font-size: 18px;
             letter-spacing: .5px;
             text-decoration: none !important;
-            text-decoration: none;
             text-align: center;
+            color: -webkit-link;
 
         }
 
-        .link2{
-            margin-top: 8px!important;
+        .link2 {
+            margin-top: 8px !important;
             padding: 7px;
             display: block;
-            color: white;
+            color: white !important;
             font-weight: bold;
             font-size: 18px;
             border-radius: 25px;
@@ -268,13 +269,13 @@
             text-decoration: none !important;
 
         }
-        
-        .link3{
+
+        .link3 {
             background: #302341;
-            margin-top: 8px!important;
+            margin-top: 8px !important;
             padding: 7px;
             display: block;
-            color: white;
+            color: white !important;
             font-weight: bold;
             font-size: 18px;
             border-radius: 25px;
@@ -283,15 +284,16 @@
             font-style: italic;
             text-align: center;
             text-decoration: none !important;
-            
+
         }
-        .link4{
+
+        .link4 {
             background-color: #117a8b;
             box-shadow: 2px 2px #360813;
-            margin-top: 8px!important;
+            margin-top: 8px !important;
             padding: 7px;
             display: block;
-            color: white;
+            color: white !important;
             font-weight: bold;
             font-size: 18px;
             border-radius: 25px;
@@ -302,6 +304,7 @@
 
         }
 
+        /* ********************************************************************************** */
         .gamezone {
             width: 100%;
             height: 6vh;
@@ -313,14 +316,15 @@
             text-shadow: 2px 2px #000;
         }
 
-        .mainGame{
+        .mainGame {
             width: 100%;
             height: 25vh;
             border: solid yellow;
             background-color: #25d87333;
             border-radius: 8px;
         }
-        .jodiRecord{
+
+        .jodiRecord {
             width: 100%;
             height: 8vh;
             background-color: #12596e;
@@ -331,12 +335,14 @@
             padding: 15px;
             margin-top: 28px;
         }
-        .mainJodiRecord{
+
+        .mainJodiRecord {
             width: 100%;
             height: 31vh;
-            background-color:  #ef6c3f3b;
+            background-color: #ef6c3f3b;
         }
-        .mainpannel{
+
+        .mainpannel {
             width: 100%;
             height: 7vh;
             background-color: red;
@@ -347,10 +353,89 @@
             margin-top: 8px;
             text-shadow: 2px 2px #000;
         }
-        .backpannel{
+
+        .backpannel {
             width: 100%;
             height: 31vh;
             background-color: #d6d6d6;
+        }
+
+        .pass {
+            width: 100%;
+            height: 12vh;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            background-color: rgb(31, 79, 99);
+            color: rgb(204, 255, 0);
+            padding: 25px;
+            font-style: italic;
+        }
+
+        .test {
+            text-align: center;
+            margin-top: 3%;
+            margin-bottom: 1%;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: brown;
+            background-color: whitesmoke;
+        }
+
+        .empty {
+            width: 100%;
+            height: 10vh;
+            background-color: #3b5057;
+            border-top: 5px solid rgb(0, 0, 0);
+            margin-bottom: 2%;
+        }
+
+        .refrash {
+            background: linear-gradient(to right, #02dc61, #3c67b8) !important;
+            color: white;
+            border: solid 1px #000;
+            font-size: 1.4em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none ! important;
+            font-weight: bold;
+        }
+
+        .rehref {
+            color: white !important;
+            font-weight: bold;
+            text-decoration: none !important;
+            background-color: unset !important;
+        }
+
+        .saatasite {
+            width: 100%;
+            height: 12vh;
+            background-color: black;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 8px;
+            margin-bottom: 7px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 28vh;
+            background-color: #8ff3ce;
+
+        }
+
+        .button {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            width: 85px;
+            height: 55px;
+            border-radius: 5px;
+            margin-top: 2%;
+            margin-left: 35px;
+
         }
     </style>
 </head>
@@ -361,7 +446,6 @@
             <h1 class="textColor my-2">SattaMatkaa.Site</h1>
         </a>
     </center>
-
 
     <div class="container-flude" id="homeContent">
 
@@ -805,7 +889,7 @@
         <a href="timeBazar" class="link3"> Time Bazar Jodi Chart</a>
         <a href="milanDay" class="link3">Milan Day Jodi Chart</a>
     </div>
-    
+
     <div class="mainpannel">
         <h5>PANEL CHART ZONE</h5>
     </div>
@@ -815,11 +899,32 @@
         <a href="panelseridevi" class="link4"> Sri Devi Panel Chart</a>
         <a href="paneltime" class="link4"> Time Bazar Panel Chart</a>
         <a href="panelmilan" class="link4">Milan Day Panel Chart</a>
-
     </div>
 
+    <div class="pass">
+        <h3>Aaj Kya Pass Hua</h3>
+    </div>
 
+    <div class="test">
+        Test..
+        <hr>
+    </div>
 
+    <div class="empty">
+    </div>
+
+    <div class="saatasite">
+        <button class="refrash"><a href="#" class="rehref"> SattaMatkaa.Site </a></button>
+    </div>
+    <footer>
+        <div class="footer text-center">
+            <button type="button" class="btn btn-danger button">Back</button>
+            <button type="button" class="btn btn-danger button">Home</button> <br>
+            <p class="blackbold my-3"><a href="/" style="padding-right: 4px;">Domain</a>ALL RIGHTS RESERVED.</p>
+            <p style="margin-top: -15px;" class="blackbold">(2019-2020)</p>
+            <p style="margin-top: -15px;" class="blackbold">*****</p>
+        </div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
