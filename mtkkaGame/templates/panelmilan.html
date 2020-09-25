@@ -1,11 +1,2105 @@
-<!DOCTYPE html>
+{% load static %}
+
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>panel</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/stlye.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@1&display=swap" rel="stylesheet">
+    <style>
+        .namehref {
+            text-decoration: none ! important;
+        }
+
+        .firstdivpara {
+            width: 100%;
+            background-color: #28a745 !important;
+            padding: 16px;
+            color: white;
+            border: 1px solid #dee2e6 !important;
+            font-size: 18px;
+        }
+
+        .blackbold {
+            font-weight: bold;
+        }
+
+        .button2 {
+            background-color: rgb(240, 60, 60);
+            color: white;
+            font-weight: bold;
+            width: 150px;
+            height: 55px;
+            border-radius: 5px;
+            margin-top: 2%;
+            margin-left: 35px;
+            text-align: center;
+
+        }
+
+        .mainbharath {
+            background-color: #ffc107 !important;
+            width: 100%;
+            height: 15%;
+            text-align: center;
+            color: #000;
+            font-weight: bold;
+            padding: 14px;
+            margin-top: 1%;
+
+        }
+
+        .table td,
+        .table th {
+            padding: 0.25rem;
+            vertical-align: top;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .table-bordered td,
+        .table-bordered th {
+            border: 1px solid black;
+            height: 8vh;
+        }
+
+        .table thead th {
+            vertical-align: bottom;
+            border-bottom: 2px black;
+
+        }
+
+
+        .pass {
+            width: 100%;
+            height: 12vh;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            background-color: rgb(31, 79, 99);
+            color: rgb(204, 255, 0);
+            padding: 25px;
+            font-style: italic;
+        }
+
+        .test {
+            text-align: center;
+            margin-top: 3%;
+            margin-bottom: 1%;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: brown;
+            background-color: whitesmoke;
+        }
+
+        .empty {
+            width: 100%;
+            height: 10vh;
+            background-color: #3b5057;
+            border-top: 5px solid rgb(0, 0, 0);
+            margin-bottom: 2%;
+        }
+
+        .refrash {
+            background: linear-gradient(to right, #02dc61, #3c67b8) !important;
+            color: white;
+            border: solid 1px #000;
+            font-size: 1.4em;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none ! important;
+            font-weight: bold;
+        }
+
+        .rehref {
+            color: white !important;
+            font-weight: bold;
+            text-decoration: none !important;
+            background-color: unset !important;
+        }
+
+        .saatasite {
+            width: 100%;
+            height: 12vh;
+            background-color: black;
+            text-align: center;
+            padding-top: 15px;
+            padding-bottom: 8px;
+            margin-bottom: 7px;
+        }
+
+        .footer {
+            width: 100%;
+            height: 28vh;
+            background-color: #8ff3ce;
+
+        }
+
+        .button {
+            background-color: red;
+            color: white;
+            font-weight: bold;
+            width: 85px;
+            height: 55px;
+            border-radius: 5px;
+            margin-top: 2%;
+            margin-left: 35px;
+
+        }
+
+        .samajseva {
+            font-weight: bold;
+            text-shadow: rgb(0, 0, 0) 1px 1px;
+            background-color: rgb(186, 42, 42);
+            width: 100%;
+            height: 12vh;
+            text-align: center;
+            color: white;
+            padding-top: 10px;
+        }
+
+        .maindate {
+            width: 100%;
+            height: 133vh;
+            background-color: #25d87333;
+        }
+
+        .redbold {
+            font-weight: bold;
+            color: red;
+        }
+
+        .perperbold {
+            font-weight: bold;
+            color: purple;
+        }
+
+        .orangebold {
+            font-weight: bold;
+            color: orangered;
+        }
+
+        .kalyan {
+            background-color: rgb(186, 42, 42);
+            width: 100%;
+            height: 8vh;
+            border: solid rgb(235, 192, 97);
+        }
+
+        .whitebold {
+            text-align: center;
+            font-weight: bold;
+            color: rgb(255, 255, 255);
+            padding: 12px;
+            text-shadow: rgb(0, 0, 0) 1px 1px;
+        }
+
+        .jodi {
+            padding-top: 35px;
+        }
+
+        .nightpara {
+            text-align: center;
+            padding-top: 20px;
+            color: red;
+            font-weight: bold;
+            font-size: 17px;
+            padding-bottom: 20px;
+        }
+
+        .posting {
+
+            width: 100%;
+            height: 8vh;
+            background-color: rgb(186, 42, 42);
+            color: white;
+            font-weight: bold;
+            text-align: center;
+            padding: 13px;
+            text-shadow: rgb(0, 0, 0) 1px 1px;
+
+        }
+    </style>
+
+    <title>Bharath Jpdi Chart</title>
 </head>
+
 <body>
-    milan
+    <center>
+        <a href="/" class="namehref">
+            <h1 class="textColor my-4">SattaMatkaa.Site</h1>
+        </a>
+    </center>
+
+    <div class="container-flude firstdivpara">
+        <center>
+            <p>Milan Day Chart, Milan Day Chart 2018, Milan Day Chart Open, Milan DayChart Night, Milan Day Chart Result, Milan Day Chart Video, Milan Day Chart Matka Satta, Milan Day Chart Today, Milan Day Chart Matkaguru In
+        </center>
+        </p>
+    </div>
+    <div class="text-center">
+        <a href="#bottombutton"> <button type="button" class="btn btn-danger button2">Go To Down</button></a>
+    </div>
+
+    <div class="container py-3 text-center  " id="content">
+        <table
+            class="table table-sm bg-light table-bordered font-weight-bold border border-success border-lg shadow-sm">
+            <thead>
+                <tr>
+                    <th colspan="8" class="m-0 p-0">
+                        <h2 class="text-capitalize py-2 font-weight-bold bg-warning">milan day panel chart</h2>
+                    </th>
+                </tr>
+                <tr>
+
+                    <th>Date</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            <tbody>
+                <tr>
+                    <td>30/12/19<br> to <br>05/01/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>6<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>69</h3>
+                            </div>
+                            <div class='pl-2'>5<br>7<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>4<br>7<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>99</h3>
+                            </div>
+                            <div class='pl-2'>4<br>7<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>5<br>5<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>98</h3>
+                            </div>
+                            <div class='pl-2'>4<br>4<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>5<br>5<br></div>
+                            <div>
+                                <h3 class='py-3'>48</h3>
+                            </div>
+                            <div class='pl-2'>2<br>7<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>2<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>92</h3>
+                            </div>
+                            <div class='pl-2'>1<br>4<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>2<br>7<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>66</h3>
+                            </div>
+                            <div class='pl-2'>3<br>5<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>5<br>7<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>01</h3>
+                            </div>
+                            <div class='pl-2'>2<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>06/01/20<br> to <br>12/01/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>5<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>35</h3>
+                            </div>
+                            <div class='pl-2'>3<br>3<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>6<br>8<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>35</h3>
+                            </div>
+                            <div class='pl-2'>2<br>4<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>4<br>6<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>77</h3>
+                            </div>
+                            <div class='pl-2'>2<br>5<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>1<br>7<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>66</h3>
+                            </div>
+                            <div class='pl-2'>1<br>7<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>5<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>67</h3>
+                            </div>
+                            <div class='pl-2'>1<br>2<br>4<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>1<br>8<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>83</h3>
+                            </div>
+                            <div class='pl-2'>2<br>3<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>1<br>5<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>27</h3>
+                            </div>
+                            <div class='pl-2'>1<br>2<br>4<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13/01/20<br> to <br>19/01/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>5<br>7<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>05</h3>
+                            </div>
+                            <div class='pl-2'>7<br>9<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>6<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>75</h3>
+                            </div>
+                            <div class='pl-2'>6<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>1<br>2<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>05</h3>
+                            </div>
+                            <div class='pl-2'>1<br>6<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>7<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>07</h3>
+                            </div>
+                            <div class='pl-2'>2<br>5<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>2<br>3<br></div>
+                            <div>
+                                <h3 class='py-3'>65</h3>
+                            </div>
+                            <div class='pl-2'>1<br>2<br>2<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>6<br>7<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>36</h3>
+                            </div>
+                            <div class='pl-2'>7<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>5<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>43</h3>
+                            </div>
+                            <div class='pl-2'>1<br>3<br>9<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>20/01/20<br> to <br>26/01/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>7<br>8<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>46</h3>
+                            </div>
+                            <div class='pl-2'>6<br>0<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>3<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>43</h3>
+                            </div>
+                            <div class='pl-2'>6<br>7<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>4<br>6<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>77</h3>
+                            </div>
+                            <div class='pl-2'>1<br>7<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>4<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>34</h3>
+                            </div>
+                            <div class='pl-2'>6<br>8<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>3<br>5<br></div>
+                            <div>
+                                <h3 class='py-3'>06</h3>
+                            </div>
+                            <div class='pl-2'>2<br>2<br>2<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>4<br>5<br></div>
+                            <div>
+                                <h3 class='py-3'>06</h3>
+                            </div>
+                            <div class='pl-2'>3<br>4<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>27/01/20<br> to <br>02/02/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>2<br>3<br></div>
+                            <div>
+                                <h3 class='py-3'>74</h3>
+                            </div>
+                            <div class='pl-2'>6<br>9<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>5<br>6<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>15</h3>
+                            </div>
+                            <div class='pl-2'>5<br>0<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>3<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>36</h3>
+                            </div>
+                            <div class='pl-2'>4<br>4<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>4<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>63</h3>
+                            </div>
+                            <div class='pl-2'>1<br>2<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>7<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>06</h3>
+                            </div>
+                            <div class='pl-2'>2<br>6<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>8<br>8<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>62</h3>
+                            </div>
+                            <div class='pl-2'>3<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>8<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>93</h3>
+                            </div>
+                            <div class='pl-2'>1<br>4<br>8<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>03/02/20<br> to <br>09/02/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>6<br>6<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>29</h3>
+                            </div>
+                            <div class='pl-2'>6<br>6<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>6<br>6<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>18</h3>
+                            </div>
+                            <div class='pl-2'>3<br>7<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>8<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>76</h3>
+                            </div>
+                            <div class='pl-2'>1<br>5<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>3<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>31</h3>
+                            </div>
+                            <div class='pl-2'>5<br>7<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>5<br>6<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>02</h3>
+                            </div>
+                            <div class='pl-2'>2<br>2<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>1<br>3<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>44</h3>
+                            </div>
+                            <div class='pl-2'>3<br>4<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>4<br>5<br></div>
+                            <div>
+                                <h3 class='py-3'>14</h3>
+                            </div>
+                            <div class='pl-2'>1<br>4<br>9<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>10/02/20<br> to <br>16/02/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>6<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>79</h3>
+                            </div>
+                            <div class='pl-2'>2<br>7<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>7<br>8<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>33</h3>
+                            </div>
+                            <div class='pl-2'>2<br>5<br>6<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>4<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>52</h3>
+                            </div>
+                            <div class='pl-2'>5<br>8<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>3<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>59</h3>
+                            </div>
+                            <div class='pl-2'>4<br>7<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>3<br>6<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>88</h3>
+                            </div>
+                            <div class='pl-2'>3<br>5<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>7<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>84</h3>
+                            </div>
+                            <div class='pl-2'>2<br>5<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>1<br>3<br>4<br></div>
+                            <div>
+                                <h3 class='py-3'>88</h3>
+                            </div>
+                            <div class='pl-2'>5<br>6<br>7<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>17/02/20<br> to <br>23/02/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>4<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>14</h3>
+                            </div>
+                            <div class='pl-2'>2<br>5<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>9<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>31</h3>
+                            </div>
+                            <div class='pl-2'>1<br>3<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>7<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>68</h3>
+                            </div>
+                            <div class='pl-2'>4<br>5<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>3<br>4<br></div>
+                            <div>
+                                <h3 class='py-3'>90</h3>
+                            </div>
+                            <div class='pl-2'>2<br>3<br>5<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>2<br>3<br></div>
+                            <div>
+                                <h3 class='py-3'>69</h3>
+                            </div>
+                            <div class='pl-2'>3<br>8<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>5<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>71</h3>
+                            </div>
+                            <div class='pl-2'>1<br>3<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>5<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>24</h3>
+                            </div>
+                            <div class='pl-2'>2<br>4<br>8<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>24/02/20<br> to <br>01/03/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>1<br>3<br>5<br></div>
+                            <div>
+                                <h3 class='py-3'>94</h3>
+                            </div>
+                            <div class='pl-2'>1<br>6<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>8<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>97</h3>
+                            </div>
+                            <div class='pl-2'>4<br>6<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>7<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>84</h3>
+                            </div>
+                            <div class='pl-2'>2<br>4<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>6<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>51</h3>
+                            </div>
+                            <div class='pl-2'>1<br>2<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>3<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>19</h3>
+                            </div>
+                            <div class='pl-2'>1<br>8<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>3<br>6<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>77</h3>
+                            </div>
+                            <div class='pl-2'>2<br>2<br>3<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>3<br>5<br></div>
+                            <div>
+                                <h3 class='py-3'>95</h3>
+                            </div>
+                            <div class='pl-2'>6<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>02/03/20<br> to <br>08/03/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>6<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>02</h3>
+                            </div>
+                            <div class='pl-2'>4<br>8<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>4<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>67</h3>
+                            </div>
+                            <div class='pl-2'>3<br>5<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>6<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>74</h3>
+                            </div>
+                            <div class='pl-2'>2<br>4<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>6<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>95</h3>
+                            </div>
+                            <div class='pl-2'>1<br>4<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>9<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>15</h3>
+                            </div>
+                            <div class='pl-2'>8<br>8<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>6<br>0<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>63</h3>
+                            </div>
+                            <div class='pl-2'>2<br>4<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>6<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>86</h3>
+                            </div>
+                            <div class='pl-2'>1<br>5<br>0<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>09/03/20<br> to <br>15/03/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>8<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>06</h3>
+                            </div>
+                            <div class='pl-2'>1<br>6<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>3<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>18</h3>
+                            </div>
+                            <div class='pl-2'>1<br>7<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>7<br>8<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>42</h3>
+                            </div>
+                            <div class='pl-2'>3<br>4<br>5<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>1<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>09</h3>
+                            </div>
+                            <div class='pl-2'>1<br>2<br>6<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>4<br>8<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>27</h3>
+                            </div>
+                            <div class='pl-2'>7<br>0<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>7<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>04</h3>
+                            </div>
+                            <div class='pl-2'>2<br>2<br>0<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>16/03/20<br> to <br>22/03/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>5<br>6<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>17</h3>
+                            </div>
+                            <div class='pl-2'>2<br>5<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>6<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>62</h3>
+                            </div>
+                            <div class='pl-2'>1<br>5<br>6<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>8<br>8<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>55</h3>
+                            </div>
+                            <div class='pl-2'>1<br>4<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>9<br>9<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>82</h3>
+                            </div>
+                            <div class='pl-2'>1<br>5<br>6<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>4<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>73</h3>
+                            </div>
+                            <div class='pl-2'>7<br>8<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>7<br>9<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>53</h3>
+                            </div>
+                            <div class='pl-2'>3<br>5<br>5<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>23/03/20<br> to <br>29/03/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>30/03/20<br> to <br>05/04/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>06/04/20<br> to <br>12/04/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>13/04/20<br> to <br>19/04/20</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>20/04/20<br> to <br>26/04/20</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>27/04/20<br> to <br>03/05/20</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>04/05/20<br> to <br>10/05/20</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>11/05/20<br> to <br>17/05/20</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>18/05/20<br> to <br>24/05/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>6<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>54</h3>
+                            </div>
+                            <div class='pl-2'>5<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>6<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>85</h3>
+                            </div>
+                            <div class='pl-2'>1<br>2<br>2<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>5<br>6<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>17</h3>
+                            </div>
+                            <div class='pl-2'>1<br>3<br>3<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>8<br>0<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>82</h3>
+                            </div>
+                            <div class='pl-2'>3<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>9<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>26</h3>
+                            </div>
+                            <div class='pl-2'>3<br>6<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>*<br>*<br>*<br></div>
+                            <div>
+                                <h3 class='py-3'>**</h3>
+                            </div>
+                            <div class='pl-2'>*<br>*<br>*<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>25/05/20<br> to <br>31/05/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>2<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>37</h3>
+                            </div>
+                            <div class='pl-2'>7<br>0<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>5<br>6<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>07</h3>
+                            </div>
+                            <div class='pl-2'>2<br>7<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>5<br>6<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>18</h3>
+                            </div>
+                            <div class='pl-2'>4<br>6<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>7<br>9<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>67</h3>
+                            </div>
+                            <div class='pl-2'>3<br>5<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>3<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>19</h3>
+                            </div>
+                            <div class='pl-2'>5<br>6<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>7<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>03</h3>
+                            </div>
+                            <div class='pl-2'>1<br>2<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>3<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>47</h3>
+                            </div>
+                            <div class='pl-2'>1<br>2<br>4<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>01/06/20<br> to <br>07/06/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>4<br>4<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>44</h3>
+                            </div>
+                            <div class='pl-2'>2<br>4<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>4<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>58</h3>
+                            </div>
+                            <div class='pl-2'>1<br>2<br>5<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>3<br>4<br></div>
+                            <div>
+                                <h3 class='py-3'>89</h3>
+                            </div>
+                            <div class='pl-2'>2<br>2<br>5<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>2<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>24</h3>
+                            </div>
+                            <div class='pl-2'>3<br>4<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>5<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>54</h3>
+                            </div>
+                            <div class='pl-2'>3<br>5<br>6<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>3<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>03</h3>
+                            </div>
+                            <div class='pl-2'>1<br>5<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>6<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>30</h3>
+                            </div>
+                            <div class='pl-2'>1<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>08/06/20<br> to <br>14/06/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>4<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>32</h3>
+                            </div>
+                            <div class='pl-2'>1<br>3<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>9<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>19</h3>
+                            </div>
+                            <div class='pl-2'>4<br>7<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>3<br>5<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>50</h3>
+                            </div>
+                            <div class='pl-2'>1<br>3<br>6<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>6<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>42</h3>
+                            </div>
+                            <div class='pl-2'>2<br>3<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>3<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>17</h3>
+                            </div>
+                            <div class='pl-2'>4<br>4<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>3<br>5<br></div>
+                            <div>
+                                <h3 class='py-3'>98</h3>
+                            </div>
+                            <div class='pl-2'>3<br>7<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>6<br>9<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>55</h3>
+                            </div>
+                            <div class='pl-2'>1<br>6<br>8<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>15/06/20<br> to <br>21/06/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>5<br>7<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>04</h3>
+                            </div>
+                            <div class='pl-2'>4<br>5<br>5<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>1<br>3<br>5<br></div>
+                            <div>
+                                <h3 class='py-3'>99</h3>
+                            </div>
+                            <div class='pl-2'>2<br>3<br>4<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>2<br>8<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>05</h3>
+                            </div>
+                            <div class='pl-2'>6<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>5<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>64</h3>
+                            </div>
+                            <div class='pl-2'>1<br>4<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>7<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>74</h3>
+                            </div>
+                            <div class='pl-2'>2<br>4<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>7<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>97</h3>
+                            </div>
+                            <div class='pl-2'>1<br>6<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>2<br>4<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>44</h3>
+                            </div>
+                            <div class='pl-2'>2<br>5<br>7<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>22/06/20<br> to <br>28/06/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>2<br>7<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>99</h3>
+                            </div>
+                            <div class='pl-2'>3<br>7<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>2<br>4<br></div>
+                            <div>
+                                <h3 class='py-3'>78</h3>
+                            </div>
+                            <div class='pl-2'>2<br>7<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>6<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>52</h3>
+                            </div>
+                            <div class='pl-2'>5<br>8<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>4<br>6<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>83</h3>
+                            </div>
+                            <div class='pl-2'>6<br>7<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>7<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>78</h3>
+                            </div>
+                            <div class='pl-2'>3<br>6<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>5<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>34</h3>
+                            </div>
+                            <div class='pl-2'>3<br>4<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>5<br>8<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>18</h3>
+                            </div>
+                            <div class='pl-2'>4<br>7<br>7<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>29/06/20<br> to <br>05/07/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>4<br>4<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>88</h3>
+                            </div>
+                            <div class='pl-2'>2<br>6<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>7<br>7<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>44</h3>
+                            </div>
+                            <div class='pl-2'>4<br>4<br>6<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>7<br>8<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>43</h3>
+                            </div>
+                            <div class='pl-2'>4<br>4<br>5<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>4<br>5<br></div>
+                            <div>
+                                <h3 class='py-3'>19</h3>
+                            </div>
+                            <div class='pl-2'>2<br>7<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>7<br>8<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>41</h3>
+                            </div>
+                            <div class='pl-2'>2<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>6<br>8<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>40</h3>
+                            </div>
+                            <div class='pl-2'>1<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>5<br>8<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>38</h3>
+                            </div>
+                            <div class='pl-2'>4<br>6<br>8<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>06/07/20<br> to <br>12/07/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>7<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>03</h3>
+                            </div>
+                            <div class='pl-2'>4<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>4<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>67</h3>
+                            </div>
+                            <div class='pl-2'>1<br>1<br>5<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>2<br>7<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>77</h3>
+                            </div>
+                            <div class='pl-2'>3<br>5<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>5<br>7<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>19</h3>
+                            </div>
+                            <div class='pl-2'>4<br>7<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>2<br>5<br></div>
+                            <div>
+                                <h3 class='py-3'>87</h3>
+                            </div>
+                            <div class='pl-2'>3<br>4<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>3<br>3<br></div>
+                            <div>
+                                <h3 class='py-3'>81</h3>
+                            </div>
+                            <div class='pl-2'>6<br>6<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>4<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>68</h3>
+                            </div>
+                            <div class='pl-2'>3<br>6<br>9<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>13/07/20<br> to <br>19/07/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>7<br>7<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>44</h3>
+                            </div>
+                            <div class='pl-2'>6<br>8<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>4<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>72</h3>
+                            </div>
+                            <div class='pl-2'>4<br>9<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>6<br>6<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>09</h3>
+                            </div>
+                            <div class='pl-2'>5<br>5<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>4<br>5<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>94</h3>
+                            </div>
+                            <div class='pl-2'>1<br>5<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>4<br>6<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>00</h3>
+                            </div>
+                            <div class='pl-2'>4<br>6<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>2<br>7<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>72</h3>
+                            </div>
+                            <div class='pl-2'>1<br>1<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>1<br>3<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>00</h3>
+                            </div>
+                            <div class='pl-2'>2<br>2<br>6<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>20/07/20<br> to <br>26/07/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>1<br>4<br>7<br></div>
+                            <div>
+                                <h3 class='py-3'>27</h3>
+                            </div>
+                            <div class='pl-2'>1<br>6<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>9<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>17</h3>
+                            </div>
+                            <div class='pl-2'>1<br>7<br>9<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>4<br>9<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>38</h3>
+                            </div>
+                            <div class='pl-2'>1<br>2<br>5<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>7<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>80</h3>
+                            </div>
+                            <div class='pl-2'>1<br>3<br>6<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>6<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>52</h3>
+                            </div>
+                            <div class='pl-2'>4<br>4<br>4<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>4<br>4<br>8<br></div>
+                            <div>
+                                <h3 class='py-3'>60</h3>
+                            </div>
+                            <div class='pl-2'>2<br>3<br>5<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>2<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>37</h3>
+                            </div>
+                            <div class='pl-2'>2<br>6<br>9<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>27/07/20<br> to <br>02/08/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>8<br>9<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>79</h3>
+                            </div>
+                            <div class='pl-2'>5<br>6<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>4<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>59</h3>
+                            </div>
+                            <div class='pl-2'>5<br>6<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around' style='color:red'>
+                            <div class='pr-2 text-center'>6<br>9<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>55</h3>
+                            </div>
+                            <div class='pl-2'>2<br>6<br>7<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>3<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>47</h3>
+                            </div>
+                            <div class='pl-2'>1<br>8<br>8<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>1<br>2<br>0<br></div>
+                            <div>
+                                <h3 class='py-3'>39</h3>
+                            </div>
+                            <div class='pl-2'>3<br>6<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>5<br>6<br>6<br></div>
+                            <div>
+                                <h3 class='py-3'>75</h3>
+                            </div>
+                            <div class='pl-2'>6<br>9<br>0<br></div>
+                        </div>
+                    </td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>3<br>5<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>73</h3>
+                            </div>
+                            <div class='pl-2'>5<br>8<br>0<br></div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>03/08/20<br> to <br>09/08/20</td>
+                    <td>
+                        <div class='d-flex justify-content-around'>
+                            <div class='pr-2'>2<br>7<br>9<br></div>
+                            <div>
+                                <h3 class='py-3'>86</h3>
+                            </div>
+                            <div class='pl-2'>4<br>4<br>8<br></div>
+                        </div>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+
+
+                </tr>
+            </tbody>
+            </thead>
+        </table>
+
+    </div>
+
+
+    <div class="samajseva">
+        <h3>Samajseva <br>
+            FREE FREE</h3>
+    </div>
+
+    <div class="container-flude maindate my-3">
+        <p class="text-center blackbold" style="margin-top: -15px;">::- DATE:**/**/***::-</p>
+        <p class="text-center blackbold" style="margin-top: -15px;">- FREE GUESSING DAILY-</p>
+        <p class="text-center redbold" style="margin-top: -15px;"> :#: NOTICE :#:</p>
+        <p class="text-center blackbold" style="margin-top: -15px;"> DATE:- 15/08/2020</p>
+        <p class="text-center perperbold" style="margin-top: -15px;"> DUE TO INDEPENDENCE DAY</p>
+        <p class="text-center perperbold" style="margin-top: -15px;">ALL MARKET HAS BEEN DECLARED AS HOLIDAY.</p>
+        <p class="text-center orangebold" style="margin-top: -15px;">SERF ★ STARLINE CHALU RAHEGA...</p>
+        <p class="text-center blackbold" style="margin-top: -15px;">☆ HAPPY INDEPENDENCE DAY TO ALL...☆</p>
+
+        <center><img src="/static/img/indiac.gif" alt="India"></center>
+        <p class="text-center blackbold">9131956812</p>
+        <hr>
+        <p class="text-center blackbold"> >> OPEN TO FIX ANK << </p>
+                <hr>
+
+                <div class="container-flude my-3 kalyan">
+                    <p class="whitebold">-: KALYAN :-</p>
+                </div>
+                <div class="container-flude jodi">
+                    <p class="text-center perperbold" style="margin-top: -15px;">P****</p>
+                    <p class="text-center blackbold" style="margin-top: -15px;">24 Jodi pass ***</p>
+                    <p class="text-center blackbold" style="margin-top: -15px;">***** </p>
+                </div>
+
+                <hr>
+                <p class="text-center blackbold">>> OPEN TO CLOSE FIX GAME << </p>
+                        <hr>
+
+                        <p class="nightpara">-: RAJDHANI NIGHT :-</p>
+
+                        <div class="posting">
+                            Posting Time RAJDHANI 8.30 pm
+                        </div>
+                        <div class="container-flude jodi">
+                            <p class="text-center blackbold" style="margin-top: -15px;">*--*</p>
+                            <p class="text-center blackbold" style="margin-top: -15px;">**--**</p>
+                            <p class="text-center blackbold" style="margin-top: -15px;">***--****</p>
+                        </div>
+    </div>
+
+    <div class="pass">
+        <h3>Aaj Kya Pass Hua</h3>
+    </div>
+    <div class="test">
+        Test..
+        <hr>
+    </div>
+    <div class="empty">
+    </div>
+
+    <div class="saatasite">
+        <button class="refrash"><a href="/" class="rehref" id="bottombutton"> SattaMatkaa.Site </a></button>
+    </div>
+
+    <footer>
+        <div class="footer text-center">
+            <button type="button" class="btn btn-danger button">Back</button>
+            <a href="/"> <button type="button" class="btn btn-danger button">Home</button> <br></a>
+            <p class="blackbold my-3"><a href="/" style="padding-right: 4px;">Domain</a>ALL RIGHTS RESERVED.</p>
+            <p style="margin-top: -15px;" class="blackbold">(2019-2020)</p>
+            <p style="margin-top: -15px;" class="blackbold">*****</p>
+        </div>
+    </footer>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1,5 +1,10 @@
 from django.shortcuts import render
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse, redirect
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login, logout
+from django.contrib import messages
+from django.contrib.auth.forms import AuthenticationForm
+
 
 # Create your views here.
 
@@ -41,6 +46,44 @@ def panelmilan(request):
 
 def panelseridevi(request):
     return render(request, 'panelseridevi.html')
- 
+
+
+# def handleSignup(request):
+#     if request.method =='POST':
+#         UserName = request.POST['UserName']
+#         password1 = request.POST['password1']
+#         password2 = request.POST['password2']
+#         email = request.POST['email']
+
+
+#         if len(UserName)>10:
+#             messages.ERROR(request,'not valid name')
+#             return redirect('signup.html')  
+
+#         if password1 != password2:
+#             messages.ERROR(request,'not valid password')
+#             return redirect('signup.html') 
+             
+
+#         myuser = User.objects.create_user(username=UserName,password=password1,email=email)
+#         myuser.save() 
+#         messages.success(request,"you are sucessfly loged in")
+  
+    
+#     return render(request,'signup.html')
+    
+   
+
+    
+
+     
+
+        
+
+
+
+    
+    
+    
 
 

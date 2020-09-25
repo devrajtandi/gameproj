@@ -138,7 +138,6 @@
         .samajseva {
             font-weight: bold;
             text-shadow: rgb(0, 0, 0) 1px 1px;
-            ;
             background-color: rgb(186, 42, 42);
             width: 100%;
             height: 12vh;
@@ -449,9 +448,9 @@
 
     <div class="container-flude" id="homeContent">
 
-        <p id="firstpara">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consequuntur, doloremque
+       <center> <p id="firstpara">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam consequuntur, doloremque
             accusantium numquam perspiciatis officia deleniti dolor. Modi quaerat similique vero facere atque harum,
-            aliquam nihil distinctio exercitationem, nam itaque.</p>
+            aliquam nihil distinctio exercitationem, nam itaque.</p> </center>
     </div>
 
 
@@ -916,6 +915,16 @@
     <div class="saatasite">
         <button class="refrash"><a href="#" class="rehref"> SattaMatkaa.Site </a></button>
     </div>
+    
+    {% for message in messages %}
+    <div class="alert alert-{{message.tage}} alert-dismissible fade show" role="alert">
+        <strong></strong> {{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      {% endfor %}
+      
     <footer>
         <div class="footer text-center">
             <button type="button" class="btn btn-danger button">Back</button>

@@ -30,5 +30,7 @@ urlpatterns = [
     path("panelBharath", views.panelBharath, name= 'panelBharath'),
     path("panelmilan", views.panelmilan, name= 'panelmilan'),
     path("panelseridevi", views.panelseridevi, name= 'panelseridevi'),
-    path("paneltime", views.paneltime, name= 'paneltime')
+    path("paneltime", views.paneltime, name= 'paneltime'),
+   
+    
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
